@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 const {
-    createCourse,getCourses,getCourseById,updateCourse,deleteCourse
+    createCourse,getCourses,getCourseById,updateCourse,deleteCourse,getCheapCourses
 } = require("../controllers/courseController");
 
 router.post("/", createCourse);
