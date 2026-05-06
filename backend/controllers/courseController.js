@@ -96,3 +96,19 @@ exports.deleteCourse = async (req, res) => {
         });
     }
 };
+
+exports.getCheapCourses = async (req, res) => {
+
+    try {
+        const cheapCourses = await Course.find({
+            fees: { $lt: 5000 }
+        });
+
+        res.json(cheapCourses);
+
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        });
+    }
+};

@@ -12,6 +12,8 @@ router.get("/", getCourses);
 
 router.get("/:id", getCourseById);
 
+router.get("/cheap/all", getCheapCourses);
+
 router.put("/:id", updateCourse);
 
 router.delete("/:id", deleteCourse);
